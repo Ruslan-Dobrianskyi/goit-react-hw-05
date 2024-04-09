@@ -9,11 +9,11 @@ const Navigation = () => {
   return (
     <div>
       <header className={s.nav}>
-        <div>Movies</div>
+        <h1 className={s.title}>Cinema Films</h1>
         <ul>
           <li>
             <NavLink className={buildLinkClass} to="/">
-              HomePages
+              Home
             </NavLink>
           </li>
           <li>

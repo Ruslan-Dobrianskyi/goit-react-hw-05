@@ -20,5 +20,13 @@
   text-decoration: none;
 }
 .active {
-  color: blue;
+  color: black;
+}
+
+.title {
+  color: rgb(127, 3, 158);
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: 600;
+  padding: 20px;
 }

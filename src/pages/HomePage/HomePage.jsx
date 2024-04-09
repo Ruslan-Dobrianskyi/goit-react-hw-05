@@ -8,6 +8,7 @@ const HomePage = () => {
   useEffect(() => {
     fetchTrendingMovies().then((data) => setMovies(data.results));
   }, []);
+
   return (
     <div className={s.HomePage}>
       <h2 className={s.title}>Trending</h2>
