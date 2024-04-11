@@ -15,7 +15,12 @@ const HomePage = () => {
       <ul className={s.list}>
         {movies.map((movie) => (
           <li key={movie.id} className={s.item}>
-            <Link to={"/movies/" + movie.id.toString()}>{movie.title}</Link>
+            <Link className={s.title} to={"/movies/" + movie.id.toString()}>
+              <img
+                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+              />
+              {movie.title}
+            </Link>
           </li>
         ))}
       </ul>

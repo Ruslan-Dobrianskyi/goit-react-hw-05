@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchMovieReviews } from "../../services/api";
+import s from "./MovieReviews.module.css";
 
 const MovieReviews = () => {
   const { movieId } = useParams();
@@ -17,13 +18,13 @@ const MovieReviews = () => {
   }
 
   return (
-    <div>
+    <div className={s.reviews}>
       {reviews && (
-        <ul>
+        <ul className={s.reviewsList}>
           {reviews.results.map((review) => (
-            <li key={review.id}>
+            <li className={s.review} key={review.id}>
               <h3>Author: {review.author}</h3>
-              <p>{review.content}</p>
+              <p className={s.content}>{review.content}</p>
             </li>
           ))}
         </ul>

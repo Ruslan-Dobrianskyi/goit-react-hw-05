@@ -32,17 +32,21 @@ const MovieDetailsPage = () => {
         <h1>{movie.title}</h1>
         <div className={s.movieCard}>
           <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} />
-          <p>User Score: {movie.vote_average}</p>
-          <p> Overview:{movie.overview}</p>
-          <p>Release Date: {movie.release_date}</p>
-          <p>Genres: {movie.genres.map((genre) => genre.name).join(", ")}</p>
+          <p className={s.title}>User Score: {movie.vote_average}</p>
+          <p className={s.title}> Overview:{movie.overview}</p>
+          <p className={s.title}>Release Date: {movie.release_date}</p>
+          <p className={s.title}>
+            Genres: {movie.genres.map((genre) => genre.name).join(", ")}
+          </p>
           <div className={s.link}>
-            <Link className={s.cast} to="cast">
-              <button className={s.button}>Cast</button>
-            </Link>
-            <Link className={s.reviews} to="reviews">
-              <button className={s.button}>Reviews</button>
-            </Link>
+            <div>
+              <Link className={s.cast} to="cast">
+                <button className={s.button}>Cast</button>
+              </Link>
+              <Link className={s.reviews} to="reviews">
+                <button className={s.button}>Reviews</button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
